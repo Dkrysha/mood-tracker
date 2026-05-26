@@ -301,11 +301,10 @@ def show_history_page():
 
     history_df = history_df.rename(columns={
         "date": "Дата",
-        "score": "Оценка",
         "note": "Заметка"
     })
 
-    history_df = history_df[["Дата", "Настроение", "Оценка", "Заметка"]]
+    history_df = history_df[["Дата", "Настроение", "Заметка"]]
 
     st.dataframe(history_df, use_container_width=True, hide_index=True)
 
